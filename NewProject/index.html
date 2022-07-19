@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleInterest</title>
+    <style>
+        * {
+            background-color: aquamarine;
+        }
+
+        #firstbox {
+            border: 2px solid black;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #secondbox {
+            border: 2px solid black;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #thirdbox {
+            border: 2px solid black;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #btn {
+            background-color: burlywood;
+        }
+        #btn:hover{
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Welcome to Simple Interest Calculator !</h2>
+    Principal Amount: <input type="text" id="firstbox" class="box" placeholder="Enter amount in ₹">
+    Rate of Interest: <input type="textbox" id="secondbox" placeholder="Rate in %">
+    Time in months : <input type="textbox" id="thirdbox" placeholder="Enter time in months">
+    <button id="btn"> Calculate </button>
+    <p id="demo"></p>
+</body>
+<script>
+
+    
+    let calc = document.getElementById("btn");
+    calc.addEventListener('click', function myFunction() {
+    const p = document.getElementById("firstbox").value;
+    const r = document.getElementById("secondbox").value;
+    const t = document.getElementById("thirdbox").value;
+    const si = p * (r / 100) * (t / 12);
+    document.getElementById("demo").innerHTML = "Simple Interest for the given amount " + "is ₹ " + si;
+
+    })
+
+
+</script>
+
+</html>
